@@ -10,9 +10,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.garcia.pontointeligente.api.domains.Empresa;
 import com.garcia.pontointeligente.api.domains.Funcionario;
@@ -22,6 +24,7 @@ import com.garcia.pontointeligente.api.utils.PasswordUtils;
 @SpringBootTest
 @ActiveProfiles("test")
 @TestInstance(Lifecycle.PER_CLASS)
+@ExtendWith(SpringExtension.class)
 public class FuncionarioRepositoryTest {
 	
 
