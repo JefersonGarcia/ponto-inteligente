@@ -1,5 +1,7 @@
 package com.garcia.pontointeligente.api.dtos;
 
+import java.util.Optional;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
@@ -12,8 +14,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class CadastroPJDto {
-
+public class CadastroPFDto {
+	
+	
 	private Long id;
 	
 	@NotEmpty(message = "Nome não pode ser vazio.")
@@ -32,9 +35,11 @@ public class CadastroPJDto {
 	@CPF(message="CPF inválido")
 	private String cpf;
 	
-	@NotEmpty(message = "Razão social não pode ser vazio.")
-	@Length(min = 5, max = 200, message = "Razão social deve conter entre 5 e 200 caracteres.")
-	private String razaoSocial;
+	private Optional<String> valorHora = Optional.empty();
+	
+	private Optional<String> qtdHorasTrabalhoDia = Optional.empty();
+	
+	private Optional<String> qtdHorasAlmoco = Optional.empty();
 	
 	@NotEmpty(message = "CNPJ não pode ser vazio.")
 	@CNPJ(message="CNPJ inválido.")
@@ -42,8 +47,8 @@ public class CadastroPJDto {
 	
 	@Override
 	public String toString() {
-		return "CadastroPJDto [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", cpf=" + cpf
-				+ ", razaoSocial=" + razaoSocial + ", cnpj=" + cnpj + "]";
+		return "FuncionarioDto [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", cpf=" + cpf
+				+ ", valorHora=" + valorHora + ", qtdHorasTrabalhoDia=" + qtdHorasTrabalhoDia + ", qtdHorasAlmoco="
+				+ qtdHorasAlmoco + ", cnpj=" + cnpj + "]";
 	}
-	
 }

@@ -25,6 +25,9 @@ import com.garcia.pontointeligente.api.services.EmpresaService;
 import com.garcia.pontointeligente.api.services.FuncionarioService;
 import com.garcia.pontointeligente.api.utils.PasswordUtils;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 @RestController
 @RequestMapping("/api/cadastrar-pj")
 @CrossOrigin(origins = "*") //pode ser configurado para aceitar conexão de um host específico (frontend por exemplo)
@@ -37,9 +40,6 @@ public class CadastroPJController {
 	
 	@Autowired
 	private EmpresaService empresaService;
-	
-	public CadastroPJController() {
-	}
 	
 	/**
 	 * Verifica se a empresa ou funcionário já existem na base de dados.
