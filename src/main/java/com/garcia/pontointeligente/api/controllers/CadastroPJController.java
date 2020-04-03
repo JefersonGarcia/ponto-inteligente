@@ -29,7 +29,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @RestController
-@RequestMapping("/api/cadastrar-pj")
+@RequestMapping("/api/pessoa-juridica")
 @CrossOrigin(origins = "*") //pode ser configurado para aceitar conexão de um host específico (frontend por exemplo)
 public class CadastroPJController {
 

@@ -31,7 +31,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @RestController
-@RequestMapping("/api/cadastrar-pf")
+@RequestMapping("/api/pessoa-fisica")
 @CrossOrigin(origins = "*")
 public class CadastroPFController {
 
